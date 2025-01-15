@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "run-s certs dev-only",
-    "dev-only": "nuxt dev --https --ssl-cert .cert.pem --ssl-key .cert.key",
+    "dev": "node init && run-s certs dev-only",
+    "dev-only": "node init && nuxt dev --https --ssl-cert .cert.pem --ssl-key .cert.key",
     "generate": "nuxt generate",
     "postinstall": "nuxt prepare",
     "certs": "node certs.mjs"
